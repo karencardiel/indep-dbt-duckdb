@@ -1,0 +1,18 @@
+# dbt
+target/
+dbt_packages/
+logs/
+
+# Python / entorno virtual
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# DuckDB temporales (mantener indep.duckdb si lo quieres subir, o descomenta *.duckdb para ignorarlo)
+*.duckdb.wal
+*.duckdb.tmp
+
+# macOS
+.DS_Store
+EOF

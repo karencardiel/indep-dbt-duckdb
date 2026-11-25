@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: int_lotes_unificados
+    description: "Lotes unificados de 2024 a 2026 con clave única por lote y sin duplicados."
+    columns:
+      - name: lote_sk
+        tests:
+          - unique
+          - not_null
+      - name: anio
+        tests:
+          - not_null
+      - name: resultado_lote
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Vendido', 'Desierto', 'Otro / sin venta']
+
+  - name: fct_eventos
+    description: "Tabla final a nivel lote con días entre convocatoria y fallo y métricas de sobreprecio."
+    columns:
+      - name: lote_sk
+        tests:
+          - unique
+          - not_null
+      - name: anio
+        tests:
+          - not_null
+      - name: resultado_lote
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Vendido', 'Desierto', 'Otro / sin venta']
+
+  - name: mart_resumen_por_anio
+    description: "Resumen anual de lotes, tasa de venta, días promedio y sobreprecio."
+    columns:
+      - name: anio
+        tests:
+          - unique
+          - not_null
+
+  - name: mart_resumen_por_tipo_evento
+    description: "Resumen por tipo de evento comercial."
+    columns:
+      - name: tipo_evento
+        tests:
+          - unique
+          - not_null
+
+  - name: mart_resumen_por_tipo_bien
+    description: "Resumen por tipo de bien subastado o adjudicado."
+    columns:
+      - name: tipo_bien
+        tests:
+          - unique
+          - not_null
