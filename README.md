@@ -1,6 +1,6 @@
-<h1> <img src = "https://slackmojis.com/emojis/5019-dbt/download" width="35"/> Pipeline INDEP con dbt + DuckDB </h1>
+<h1><img src="https://slackmojis.com/emojis/5019-dbt/download" width="35"/> Pipeline INDEP</h1>
 
-Este proyecto es un pipeline hecho con **dbt Core** y **DuckDB** (`indep.duckdb`) para limpiar los datos de los eventos comerciales del **INDEP** (2024 a 2026). Los archivos originales venían bastante desordenados, así que se dejaron sin duplicados y listos para analizar.
+Este proyecto es un pipeline hecho con **dbt** y **DuckDB** (`indep.duckdb`) para limpiar los datos de los eventos comerciales del **INDEP** (2024 a 2026). Los archivos originales venían bastante desordenados, así que se dejaron sin duplicados y listos para analizar.
 
 ---
 
