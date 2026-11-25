@@ -25,7 +25,7 @@ indep_pipeline/
 Antes de empezar se revisó cada archivo para ver cómo venía. Esto fue lo que se encontró:
 
 - **2024** (`INDEP_5_Resultados_de_Ventas.csv`, 18,275 filas): las columnas no tenían guiones bajos, traía una columna de más (`estadocomprador_etq`), 23 duplicados dentro del mismo archivo y regiones mezcladas en el campo `estado`.
-- **2025** (`b2_resultado_eventos_comerciales_2025.csv` con 5,235 filas y `resultado_eventos_comerciales_noviembre_2025.csv` con 4,844): el corte de noviembre se empalma con el consolidado del año, así que hay registros que salen en los dos archivos.
+- **2025** (`b2_resultado_eventos_comerciales_2025.csv` con 5,235 filas y `resultado_eventos_comerciales_noviembre_2025.csv` con 4,844): varios registros del corte de noviembre ya venían en el consolidado del año, así que se repiten en los dos archivos.
 - **2026** (`b3_resultado_eventos_comerciales_mayo_2026.csv` con 967 filas y `b2_resultado_eventos_comerciales_7_agosto_2026.csv` con 1,425): el corte de agosto ya incluye los lotes de mayo, más los eventos nuevos.
 
 ### Cómo se limpiaron
