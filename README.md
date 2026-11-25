@@ -2,7 +2,6 @@
 
 Este proyecto es un pipeline hecho con **dbt** y **DuckDB** (`indep.duckdb`) para limpiar los datos de los eventos comerciales del **INDEP** (2024 a 2026). Los archivos originales venían bastante desordenados, así que se dejaron sin duplicados y listos para analizar.
 
----
 
 ## Cómo está organizado
 
@@ -18,7 +17,6 @@ indep_pipeline/
 └── dbt_project.yml
 ```
 
----
 
 ## Qué se encontró en los datos
 
@@ -34,7 +32,7 @@ Antes de empezar se revisó cada archivo para ver cómo venía. Esto fue lo que 
 - Los vacíos y los `'-'` se convirtieron a `NULL`.
 - Se creó una clave única, `lote_sk`, y con esa se quitaron los duplicados en `int_lotes_unificados`.
 
----
+
 
 ## Los modelos
 
@@ -44,7 +42,7 @@ Antes de empezar se revisó cada archivo para ver cómo venía. Esto fue lo que 
   - `fct_eventos`: calcula los días que pasan entre la convocatoria y el fallo, y el sobreprecio.
   - `mart_resumen_por_anio`, `mart_resumen_por_tipo_evento` y `mart_resumen_por_tipo_bien`: resúmenes por año, por tipo de evento y por tipo de bien, todos con la tasa de venta.
 
----
+
 
 ## Cómo correrlo
 
@@ -57,7 +55,7 @@ dbt build
 dbt docs generate && dbt docs serve
 ```
 
----
+
 
 ## Lineage Graph
 
